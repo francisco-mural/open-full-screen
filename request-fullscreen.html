@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element request fullscreen</title>
+  <script>
+  const turnFullScreen = () => {
+    const body = document.querySelector("body")
+    body.classList.add("full-screen")
+    body.requestFullscreen()
+  }
+  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: white;
+    }
+    .full-screen button {
+      display:none
+    }
+    .content {
+      display: none;
+      flex-direction: column;
+      height: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .full-screen .content {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" onclick="turnFullScreen()">Set this page to full screen</button>
+  <div class="content">
+    <h1>Full screen success</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id labore, placeat perspiciatis, repellendus quos enim mollitia temporibus consequatur officia, ipsum ullam est! Ducimus voluptatibus maiores aspernatur reprehenderit? Placeat, repellendus quaerat?</p>
+  </div>
+
+</body>
+</html>
